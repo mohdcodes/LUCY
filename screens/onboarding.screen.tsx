@@ -25,7 +25,7 @@ export default function OnBoardingScreen() {
   };
   return (
     <LinearGradient
-      colors={['#150252', '#000000']}
+      colors={['#150252', '#00fff0']}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={styles.container}
@@ -41,7 +41,7 @@ export default function OnBoardingScreen() {
           <View key={index} style={styles.slide}>
             {item.image}
             <Text style={styles.title}>{item.title}</Text>
-            <Text>{item.subtitle} </Text>
+            <Text style={styles.subtitle}>{item.subtitle} </Text>
           </View>
         ))}
       </ScrollView>
@@ -65,5 +65,14 @@ const styles = StyleSheet.create({
     fontSize: scale(22),
     textAlign: 'center',
     fontWeight: '500',
+    marginTop: 15,
+    marginHorizontal: 10,
+  },
+  subtitle: {
+    color: '#000000',
+    fontSize: scale(16),
+    textAlign: 'center',
+    marginTop: 8,
+    marginHorizontal: 5,
   },
 });
